@@ -87,10 +87,10 @@ gulp.task('test', function () {
     }*/
  
     // gulp source doesn't matter, all files are referenced in options object above 
-   return gulp.src('app.js', { read: false })
+  /* return gulp.src('app.js', { read: false })
         .pipe(sonar(options))
         .on('error', util.log);
-});
+});*/
 
 gulp.task('nightwatch', function() {
   gulp.src('nightwatch.js')
