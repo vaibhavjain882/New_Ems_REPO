@@ -3,7 +3,7 @@ var nodemon = require('gulp-nodemon');
 var istanbul = require('gulp-istanbul');
 var jshint = require('gulp-jshint');
 var mocha = require('gulp-mocha');
-var sonar=require('gulp-sonar');
+//var sonar=require('gulp-sonar');
 var util = require('util');
 var gulp = require('gulp'),
     nightwatch = require('gulp-nightwatch');
@@ -60,7 +60,7 @@ gulp.task('test', function () {
 
 
 
-gulp.task('sonar', function () {
+/*gulp.task('sonar', function () {
     var options = {
         sonar: {
             host: {
@@ -71,11 +71,11 @@ gulp.task('sonar', function () {
                 username: 'sonar',
                 password: 'sonar'
             },*/
-            projectKey: 'sonar:my-project:1.0.0',
+           /* projectKey: 'sonar:my-project:1.0.0',
             projectName: 'AngularProject',
-            projectVersion: '1.0.0',
+            projectVersion: '1.0.0',*/
             // comma-delimited string of source directories 
-            sources: 'app.js',
+          /*  sources: 'app.js',
             language: 'js',
             sourceEncoding: 'UTF-8',
             javascript: {
@@ -84,7 +84,7 @@ gulp.task('sonar', function () {
                 }
             }
         }
-    }
+    }*/
  
     // gulp source doesn't matter, all files are referenced in options object above 
    return gulp.src('app.js', { read: false })
