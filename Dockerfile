@@ -13,16 +13,14 @@ WORKDIR /data/artifact/
 ADD node_modules node_modules
 ADD models models
 ADD html html
-ADD examples examples
 ADD jshint-report jshint-report
 ADD lib lib
-ADD coverage coverage
 ADD target target
 ADD mocha-report mocha-report
 ADD routes routes
 ADD gatling gatling
 ADD tests tests
-ADD app.js gulpfile.js package.json selenium-server-standalone-2.47.1.jar nightwatch.json nightwatch.js ./
+ADD app.js gulpfile.js package.json selenium-server-standalone-2.47.1.jar nightwatch.json  ./
 
 #Setting timezone to match time zone of sonar server
 RUN echo "Asia/Kolkata" > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
