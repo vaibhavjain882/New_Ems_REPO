@@ -10,7 +10,7 @@ module.exports = {
 	
   'Test for EMS-APPLICATION' : function (client) {
     client
-      .url('http://172.27.59.185:5001/#/add')
+      .url('http://172.27.59.185:5003/#/add')
       .waitForElementVisible('body', 1000)
       .assert.title('Employee Application')
       .assert.visible('input')
@@ -23,7 +23,7 @@ module.exports = {
   },
   'List of Employees' : function(client,browser){
 	  client
-	  .url('http://172.27.59.185:5001/#/add')
+	  .url('http://172.27.59.185:5003/#/add')
 	  .waitForElementVisible('body', 1000)
 	  .assert.title('Employee Application')
 	.end();
