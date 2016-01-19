@@ -1,4 +1,4 @@
-#FROM www.cybage-docker-registry.com:9080/jenkins_node_slave:1.3
+FROM pratiksha12/jenkins
 #hello testing
 RUN ln -s /usr/local/bin/node /usr/bin/node
 RUN ln -s /usr/local/bin/gulp /usr/bin/gulp
