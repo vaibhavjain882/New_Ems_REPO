@@ -16,7 +16,7 @@ outputs:
 
 image: vaibhavjain882/argo-test-image
 command: ["sh", "-c"]
-args: [cd /data/application && ls -ltr && npm installl && gulp]
+args: [cd /data/application && ls -ltr && npm install && gulp]
 
 resources:
   mem_mib: 800
