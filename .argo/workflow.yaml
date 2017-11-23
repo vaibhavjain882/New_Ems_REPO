@@ -1,0 +1,24 @@
+---
+type: workflow
+version: 1
+name: workflow
+description: CI workflow
+
+inputs:
+  parameters:
+    COMMIT:
+      default: "%%session.commit%%"
+    REPO:
+      default: "%%session.repo%%"
+
+steps:
+-
+  checkout:
+    template: code-checkout
+-
+  build:
+    template: code-build
+    arguments:
+      artifacts.CODE: "%%steps.checkout.outputs.artifacts.CODE%%"
+
+

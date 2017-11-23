@@ -1,7 +1,7 @@
 ---
 type: container
 version: 1
-name: argo-checkout
+name: code-checkout
 description: Checks out a source repository to /data/application
 resources:
   mem_mib: 256

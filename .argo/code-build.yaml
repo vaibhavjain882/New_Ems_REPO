@@ -1,0 +1,24 @@
+---
+type: container
+version: 1
+name: code-build
+description: Build the code
+
+inputs:
+  artifacts:
+    CODE:
+      path: /data/application
+
+outputs:
+  artifacts:
+    BINARY:
+      path: /data/application/target
+
+image: vaibhavjain882/argo-test-image
+command: ["sh", "-c"]
+args: [cd /data/application && ls -ltr && gulp]
+
+resources:
+  mem_mib: 256
+  cpu_cores: 0.1
+
