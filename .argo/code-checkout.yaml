@@ -4,8 +4,8 @@ version: 1
 name: code-checkout
 description: Checks out a source repository to /data/application
 resources:
-  mem_mib: 256
-  cpu_cores: 0.1
+  mem_mib: 500
+  cpu_cores: 0.4
 image: vaibhavjain882/argo-test-image
 command: ["bash", "-c"]
 args: ["git clone %%inputs.parameters.REPO%% /data/application && cd /data/application && git checkout %%inputs.parameters.COMMIT%%"]
