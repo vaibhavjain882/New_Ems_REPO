@@ -1,0 +1,21 @@
+---
+type: container
+version: 1
+name: argo-checkout
+description: Checks out a source repository to /data/application
+resources:
+  mem_mib: 256
+  cpu_cores: 0.1
+image: vaibhavjain882/argo-test-image
+command: ["bash", "-c"]
+args: ["git clone %%inputs.parameters.REPO%% /data/application && cd /data/application && git checkout %%inputs.parameters.COMMIT%%"]
+inputs:
+  parameters:
+    COMMIT:
+      default: "%%session.commit%%"
+    REPO:
+      default: "%%session.repo%%"
+outputs:
+  artifacts:
+    CODE:
+      path: /data/application
